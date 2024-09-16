@@ -6,13 +6,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; // Import navigation styles
-import 'swiper/css/effect-fade'; // Import fade effect styles
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+import 'swiper/css/autoplay'; // Import autoplay styles
 
 import "./Home.css";
 
 // Import required modules
-import { Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { Pagination, Navigation, EffectFade, Autoplay } from 'swiper/modules';
+import NavBar from "../../components/NavBar/NavBar";
 
 const Home = () => {
   return (
@@ -20,16 +22,25 @@ const Home = () => {
       {/* swiper slider */}
       <Swiper
         pagination={{ clickable: true }} 
-        navigation={true} // Enable navigation for next/prev buttons
-        modules={[Pagination, Navigation, EffectFade]} // Include Pagination, Navigation, and EffectFade modules
+       
+        autoplay={{
+            delay: 3000, // Delay between slides (3000ms = 3 seconds)
+            disableOnInteraction: false, // Autoplay won't stop after user interaction
+          }}
+        modules={[Pagination, Navigation, EffectFade, Autoplay]} // Add Autoplay module
         className="mySwiper"
-        speed={1000} // Adjust the speed for smoother transition (1000ms = 1s)
-        effect="fade" // Add fade effect for smooth transitions
+        speed={1000} // Speed for smooth transitions (1 second)
+        effect="fade" // Apply fade effect between slides
       >
-        <SwiperSlide><img src={bg1} alt="Background 1" /></SwiperSlide>
+        <SwiperSlide><img src={bg1} alt="Background 1" />
+        
+        </SwiperSlide>
         <SwiperSlide><img src={bg2} alt="Background 2" /></SwiperSlide>
         <SwiperSlide><img src={bg3} alt="Background 3" /></SwiperSlide>
       </Swiper>
+      <div className=" z-40 absolute top-0 left-0">
+            <NavBar></NavBar>
+        </div>
     </div>
   );
 };

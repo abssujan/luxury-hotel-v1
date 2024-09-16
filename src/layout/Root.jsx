@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
     return (
-        <div>
+        <div className=" font-barlow">
             <Outlet></Outlet>
         </div>
     );
