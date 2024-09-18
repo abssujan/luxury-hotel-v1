@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../../assets/logo/logo.png';
 import { FaAlignRight, FaTimes } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -26,7 +27,7 @@ const NavBar = () => {
                 <div className='flex items-center justify-between py-8'>
                     {/* Logo */}
                     <div>
-                        <img className='w-40 h-10' src={logo} alt="Logo" />
+                        <Link to='/'><img className='w-40 h-10' src={logo} alt="Logo" /></Link>
                     </div>
                     {/* Desktop navigation links */}
                     <div className='hidden md:flex space-x-6'>
@@ -46,7 +47,7 @@ const NavBar = () => {
                 <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-full bg-black bg-opacity-70' : ''}>
                     <div className={nav ? 'fixed left-0 top-0 w-[250px] h-full bg-[#caa26d] p-6 ease-in-out duration-300' : 'fixed left-[-100%]'}>
                         <div className='flex items-center justify-between'>
-                            <img src={logo} alt="Logo" className='w-40 h-10' />
+                        <Link to='/'><img className='w-40 h-10' src={logo} alt="Logo" /></Link>
                             <FaTimes onClick={handleNav} className='w-5 h-5 cursor-pointer text-white' />
                         </div>
                         <ul className='mt-10'>

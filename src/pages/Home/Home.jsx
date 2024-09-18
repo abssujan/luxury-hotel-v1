@@ -2,7 +2,9 @@ import bg1 from "../../assets/background/background-1.jpg";
 import bg2 from "../../assets/background/background-2.jpg";
 import bg3 from "../../assets/background/background-3.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,32 +17,56 @@ import "./Home.css";
 // Import required modules
 import { Pagination, Navigation, EffectFade, Autoplay } from 'swiper/modules';
 import NavBar from "../../components/NavBar/NavBar";
+import TitleOne from "./TitleComponent/TitleOne";
+import TitleTwo from "./TitleComponent/TitleTwo";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Optional: duration of the animation
+      once: true, // Optional: trigger animations only once
+    });
+  }, []);
+
   return (
     <div>
       {/* swiper slider */}
       <Swiper
-        pagination={{ clickable: true }} 
-       
+        pagination={{ clickable: true }}
         autoplay={{
-            delay: 3000, // Delay between slides (3000ms = 3 seconds)
-            disableOnInteraction: false, // Autoplay won't stop after user interaction
-          }}
+          delay: 5000, // Delay between slides (2 seconds)
+          disableOnInteraction: false, // Autoplay won't stop after user interaction
+        }}
+        onSlideChange={() => {
+          AOS.refreshHard(); // Completely reset AOS animations on slide change
+        }}
         modules={[Pagination, Navigation, EffectFade, Autoplay]} // Add Autoplay module
         className="mySwiper"
         speed={1000} // Speed for smooth transitions (1 second)
         effect="fade" // Apply fade effect between slides
       >
-        <SwiperSlide><img src={bg1} alt="Background 1" />
-        
+        <SwiperSlide>
+          <img className="relative" src={bg1} alt="Background 1" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <TitleOne />
+          </div>
         </SwiperSlide>
-        <SwiperSlide><img src={bg2} alt="Background 2" /></SwiperSlide>
-        <SwiperSlide><img src={bg3} alt="Background 3" /></SwiperSlide>
+        <SwiperSlide>
+          <img className="relative" src={bg2} alt="Background 2" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <TitleTwo></TitleTwo>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="relative" src={bg3} alt="Background 3" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <TitleOne />
+          </div>
+        </SwiperSlide>
       </Swiper>
-      <div className=" z-40 absolute top-0 left-0">
-            <NavBar></NavBar>
-        </div>
+      <div className="z-40 absolute top-0 left-0">
+        <NavBar />
+      </div>
     </div>
   );
 };

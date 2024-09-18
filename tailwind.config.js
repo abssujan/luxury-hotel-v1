@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        barlow: '"Barlow Condensed", system-ui' 
+        barlow: '"Barlow Condensed", system-ui',
+        gilda: '"Gilda Display", serif'
       }
     },
   },
