@@ -1,5 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
-import HotelBooking from "../Home/HotelBooking/HotelBooking";
+
+import RoomDetails from "../Home/RoomsDetails/RoomDetails";
 
 const RoomsAndsuites = () => {
     return (
@@ -7,7 +8,7 @@ const RoomsAndsuites = () => {
             <NavBar></NavBar>
 
             <div className="flex items-center justify-center h-screen">
-                <HotelBooking></HotelBooking>
+                <RoomDetails></RoomDetails>
             </div>
         </div>
     );

@@ -20,6 +20,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import TitleOne from "./TitleComponent/TitleOne";
 import TitleTwo from "./TitleComponent/TitleTwo";
 import HotelBooking from "./HotelBooking/HotelBooking";
+import RoomDetails from "./RoomsDetails/RoomDetails";
 
 const Home = () => {
   useEffect(() => {
@@ -31,12 +32,12 @@ const Home = () => {
 
   return (
     <div>
-      <div className=" relative">
+      <div className="relative"> {/* This is the container that defines boundaries */}
         {/* swiper slider */}
         <Swiper
           pagination={{ clickable: true }}
           autoplay={{
-            delay: 5000, // Delay between slides (2 seconds)
+            delay: 5000, // Delay between slides (5 seconds)
             disableOnInteraction: false, // Autoplay won't stop after user interaction
           }}
           onSlideChange={() => {
@@ -56,7 +57,7 @@ const Home = () => {
           <SwiperSlide>
             <img className="relative" src={bg2} alt="Background 2" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <TitleTwo></TitleTwo>
+              <TitleTwo />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -66,14 +67,21 @@ const Home = () => {
             </div>
           </SwiperSlide>
         </Swiper>
+
+        {/* navigation bar positioning inside the relative container */}
+        <div className="z-40 absolute top-0 left-0 w-full">
+          <NavBar />
+        </div>
+
+        {/* check in and out bar positioned within the relative container */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-32 z-40 w-full">
+          <HotelBooking />
+        </div>
       </div>
-      {/* navigation bar positioning  */}
-      <div className="z-40 absolute top-0 left-0">
-        <NavBar />
-      </div>
-      {/* check in and out bar */}
-      <div className="fixed left-1/2 transform -translate-x-1/2 bottom-32 z-40">
-        <HotelBooking></HotelBooking>
+
+      {/* rooms and details section */}
+      <div className="mt-20">
+        <RoomDetails />
       </div>
     </div>
   );

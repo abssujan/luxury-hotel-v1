@@ -26,3 +26,8 @@
     height: 20px;
     bottom: 50px;
   }
+  .fixed-element {
+    position: fixed;
+    z-index: 100; /* or even higher */
+  }
+  
