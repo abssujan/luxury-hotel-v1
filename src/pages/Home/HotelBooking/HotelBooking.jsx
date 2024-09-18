@@ -82,14 +82,14 @@ const HotelBooking = () => {
           {/* Adults dropdown */}
           <div className="relative">
             <div
-              className="block text-[#222] w-full bg-[#fff] py-5 px-5 text-[15px] border-r-2 border-[#f1eeeb] cursor-pointer flex justify-between items-center"
+              className=" text-[#222] w-full bg-[#fff] py-5 px-5 text-[15px] border-r-2 border-[#f1eeeb] cursor-pointer flex justify-between items-center"
               onClick={() => toggleDropdown("adults")}
             >
               {selectedValue}
-              <span className="text-[#aa8453]">&#x25BC;</span>
+              <span className="text-[#aa8453] md:ml-8">&#x25BC;</span>
             </div>
             {isOpen?.adults && (
-              <ul className="absolute bg-white border border-gray-300 mt-1 w-full">
+              <ul className="absolute bg-white border border-gray-300  w-full">
                 {adultsOptions.map((option) => (
                   <li
                     key={option.value}
@@ -106,14 +106,14 @@ const HotelBooking = () => {
           {/* Children dropdown */}
           <div className="relative">
             <div
-              className="block text-[#222] w-full bg-[#fff] py-5 px-5 text-[15px] border-r-2 border-[#f1eeeb] cursor-pointer flex justify-between items-center"
+              className=" text-[#222] w-full bg-[#fff] py-5 px-5 text-[15px] border-r-2 border-[#f1eeeb] cursor-pointer flex justify-between items-center"
               onClick={() => toggleDropdown("children")}
             >
               {selectedChildren}
-              <span className="text-[#aa8453]">&#x25BC;</span>
+              <span className="text-[#aa8453] md:ml-8">&#x25BC;</span>
             </div>
             {isOpen?.children && (
-              <ul className="absolute bg-white border border-gray-300 mt-1 w-full">
+              <ul className="absolute bg-white border border-gray-300  w-full">
                 {childrenOptions.map((option) => (
                   <li
                     key={option.value}
@@ -134,10 +134,10 @@ const HotelBooking = () => {
               onClick={() => toggleDropdown("rooms")}
             >
               {selectedRoom}
-              <span className="text-[#aa8453]">&#x25BC;</span>
+              <span className="text-[#aa8453] md:ml-8">&#x25BC;</span>
             </div>
             {isOpen?.rooms && (
-              <ul className="absolute bg-white border border-gray-300 mt-1 w-full">
+              <ul className="absolute bg-white border border-gray-300  w-full">
                 {roomOptions.map((option) => (
                   <li
                     key={option.value}
@@ -154,7 +154,7 @@ const HotelBooking = () => {
           <div className="">
             <button
               type="submit"
-              className="w-full tracking-[3px] font-normal bg-[#aa8453] text-white py-5 px-6 text-[15px] uppercase ease-linear duration-300  cursor-pointer hover:bg-gray-900"
+              className="w-full tracking-[3px] font-normal bg-[#aa8453] text-white py-5 px-12 text-[15px] uppercase ease-linear duration-300  cursor-pointer hover:bg-gray-900"
             >
               Check Now
             </button>
