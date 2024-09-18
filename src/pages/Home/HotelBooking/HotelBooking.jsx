@@ -1,11 +1,16 @@
 import { FaCalendar } from "react-icons/fa";
 import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import './HotelBooking.css'
 
 const HotelBooking = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("1 Adult");
   const [selectedChildren, setSelectedChildren] = useState("0 Children");
   const [selectedRoom, setSelectedRoom] = useState("1 Room");
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
 
   const adultsOptions = [
     { value: "1", label: "1 Adult" },
@@ -47,26 +52,26 @@ const HotelBooking = () => {
 
   return (
     <div>
-      <form className="flex items-center justify-center">
+      <form className="flex flex-col md:flex-row items-center justify-center">
         {/* Check-in and check-out */}
         <div className="flex">
           {/* Check-in */}
           <div className="relative w-full border-r-2 border-[#f1eeeb]">
-            <input
-              type="text"
-              id="checkin"
+            <DatePicker
+              selected={checkInDate}
+              onChange={(date) => setCheckInDate(date)}
+              placeholderText="Check in"
               className="block text-[#222] w-full bg-[#fff] border-none py-5 px-5 placeholder-[#222] text-[15px] focus:outline-none focus:border-transparent"
-              placeholder="Check in"
             />
             <FaCalendar className="absolute right-2 bottom-6 text-[#aa8453]" />
           </div>
           {/* Check-out */}
           <div className="relative w-full border-r-2 border-[#f1eeeb]">
-            <input
-              type="text"
-              id="checkout"
+            <DatePicker
+              selected={checkOutDate}
+              onChange={(date) => setCheckOutDate(date)}
+              placeholderText="Check out"
               className="block text-[#222] w-full bg-[#fff] border-none py-5 px-5 placeholder-[#222] text-[15px] focus:outline-none focus:border-transparent"
-              placeholder="Check out"
             />
             <FaCalendar className="absolute right-2 bottom-6 text-[#aa8453]" />
           </div>
@@ -146,14 +151,14 @@ const HotelBooking = () => {
             )}
           </div>
            {/* Check Now Button */}
-        <div className="">
-          <button
-            type="submit"
-            className="w-full tracking-[3px] font-normal bg-[#aa8453] text-white py-5 px-6 text-[15px] uppercase ease-linear duration-300  cursor-pointer hover:bg-gray-900"
-          >
-            Check Now
-          </button>
-        </div>
+          <div className="">
+            <button
+              type="submit"
+              className="w-full tracking-[3px] font-normal bg-[#aa8453] text-white py-5 px-6 text-[15px] uppercase ease-linear duration-300  cursor-pointer hover:bg-gray-900"
+            >
+              Check Now
+            </button>
+          </div>
         </div>
 
       </form>
