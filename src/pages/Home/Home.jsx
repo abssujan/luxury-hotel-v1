@@ -22,6 +22,7 @@ import TitleTwo from "./TitleComponent/TitleTwo";
 import HotelBooking from "./HotelBooking/HotelBooking";
 import RoomDetails from "./RoomsDetails/RoomDetails";
 import NavBarWhite from "../../components/NavBar/NavBarWhite";
+import RoomSuites from "./HomeRoomsaSuit/RoomSuites";
 
 const Home = () => {
   useEffect(() => {
@@ -84,6 +85,10 @@ const Home = () => {
       {/* rooms and details section */}
       <div className="mt-20">
         <RoomDetails />
+      </div>
+      {/* Rooms & Suites */}
+      <div className="mt-20" >
+        <RoomSuites></RoomSuites>
       </div>
     </div>
   );
