@@ -21,6 +21,7 @@ import TitleOne from "./TitleComponent/TitleOne";
 import TitleTwo from "./TitleComponent/TitleTwo";
 import HotelBooking from "./HotelBooking/HotelBooking";
 import RoomDetails from "./RoomsDetails/RoomDetails";
+import NavBarWhite from "../../components/NavBar/NavBarWhite";
 
 const Home = () => {
   useEffect(() => {
@@ -71,6 +72,7 @@ const Home = () => {
         {/* navigation bar positioning inside the relative container */}
         <div className="z-40 absolute top-0 left-0 w-full">
           <NavBar />
+          <NavBarWhite></NavBarWhite>
         </div>
 
         {/* check in and out bar positioned within the relative container */}
