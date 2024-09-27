@@ -11,7 +11,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const RoomSuites = () => {
   return (
-    <div className="bg-[#f8f5f0] w-full">
+    <div className="bg-[#f8f5f0] w-full" data-aos="fade-up"
+    data-aos-duration="3000">
       {/* container */}
       <div className="max-w-[1200px] mx-auto">
         {/* heading tag */}
