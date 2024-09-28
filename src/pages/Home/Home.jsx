@@ -22,6 +22,7 @@ import RoomDetails from "./RoomsDetails/RoomDetails";
 import NavBarWhite from "../../components/NavBar/NavBarWhite";
 import RoomSuites from "./HomeRoomsaSuit/RoomSuites";
 import ExtraServices from "./ExtraServices/ExtraServices";
+import FixedHeroImage from "./FixedHeroImage/FixedHeroImage";
 
 const Home = () => {
   useEffect(() => {
@@ -90,6 +91,14 @@ const Home = () => {
         <RoomSuites></RoomSuites>
       </div>
       {/* Extra Services Section */}
+      <div>
+        <ExtraServices></ExtraServices>
+      </div>
+      {/* Fixed Hero Image */}
+      <div>
+        <FixedHeroImage></FixedHeroImage>
+      </div>
+      {/* trail */}
       <div>
         <ExtraServices></ExtraServices>
       </div>
