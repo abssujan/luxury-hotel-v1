@@ -24,6 +24,7 @@ import RoomSuites from "./HomeRoomsaSuit/RoomSuites";
 import ExtraServices from "./ExtraServices/ExtraServices";
 import FixedHeroImage from "./FixedHeroImage/FixedHeroImage";
 import HotelFacilities from "./HotelFacilites/HotelFacilities";
+import Review from "./Review/Review";
 
 const Home = () => {
   useEffect(() => {
@@ -99,7 +100,15 @@ const Home = () => {
       <div>
         <FixedHeroImage></FixedHeroImage>
       </div>
-      {/* trail */}
+      {/* Hotel Facilities */}
+      <div className="mt-40">
+        <HotelFacilities></HotelFacilities>
+      </div>
+      {/* Review section */}
+      <div>
+        <Review></Review>
+      </div>
+      {/* Hotel Facilities */}
       <div className="mt-40">
         <HotelFacilities></HotelFacilities>
       </div>
