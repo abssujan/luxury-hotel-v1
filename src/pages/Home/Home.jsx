@@ -23,6 +23,7 @@ import NavBarWhite from "../../components/NavBar/NavBarWhite";
 import RoomSuites from "./HomeRoomsaSuit/RoomSuites";
 import ExtraServices from "./ExtraServices/ExtraServices";
 import FixedHeroImage from "./FixedHeroImage/FixedHeroImage";
+import HotelFacilities from "./HotelFacilites/HotelFacilities";
 
 const Home = () => {
   useEffect(() => {
@@ -99,8 +100,8 @@ const Home = () => {
         <FixedHeroImage></FixedHeroImage>
       </div>
       {/* trail */}
-      <div>
-        <ExtraServices></ExtraServices>
+      <div className="mt-40">
+        <HotelFacilities></HotelFacilities>
       </div>
     </div>
   );
