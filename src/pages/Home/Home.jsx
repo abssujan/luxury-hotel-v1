@@ -12,8 +12,6 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "swiper/css/autoplay"; // Import autoplay styles
 
-import "./Home.css";
-
 // Import required modules
 import { Pagination, Navigation, EffectFade, Autoplay } from "swiper/modules";
 import NavBar from "../../components/NavBar/NavBar";

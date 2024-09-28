@@ -1,12 +1,18 @@
 import { MdOutlinePhoneInTalk } from "react-icons/md";
+import ExServiceSlider from "./ExServiceSlider/ExServiceSlider";
+import "./Css/ExtraServices.css";
 const ExtraServices = () => {
   return (
-    <div className="bg-[#222222] mt-32 py-20">
+    <div
+      className="bg-[#222222] mt-32 py-20"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
       {/* container */}
       <div className="max-w-[1200px] mx-auto">
-        <div className="">
+        <div className="  flex ">
           {/* text information */}
-          <div>
+          <div className="w-[30%]">
             <p className=" text-[#aa8453] uppercase text-[15px] font-[400] tracking-[6px]">
               Best Prices
             </p>
@@ -32,7 +38,7 @@ const ExtraServices = () => {
               </div>
               <div>
                 <p className="text-[15px]  font-[400] text-[#adadad] leading-[1.75rem]">
-                For information
+                  For information
                 </p>
                 <p className="text-[24px] text-[#8e6d45] font-barlow tracking-wide">
                   855 100 4444
@@ -41,7 +47,9 @@ const ExtraServices = () => {
             </div>
           </div>
           {/* Swiper Slider section */}
-          <div></div>
+          <div className="w-[70%]">
+            <ExServiceSlider></ExServiceSlider>
+          </div>
         </div>
       </div>
     </div>

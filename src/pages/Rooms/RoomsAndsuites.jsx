@@ -1,5 +1,8 @@
 import NavBar from "../../components/NavBar/NavBar";
 import NavBarWhite from "../../components/NavBar/NavBarWhite";
+import ExServiceSlider from "../Home/ExtraServices/ExServiceSlider/ExServiceSlider";
+import SliderAsset from "../Home/ExtraServices/ExServiceSlider/SliderAsset/SliderAsset";
+import SliderAssetTwo from "../Home/ExtraServices/ExServiceSlider/SliderAsset/SliderAssetTwo";
 
 import RoomDetails from "../Home/RoomsDetails/RoomDetails";
 
@@ -13,17 +16,14 @@ const RoomsAndsuites = () => {
             <div className="flex items-center justify-center h-screen">
                 <RoomDetails></RoomDetails>
             </div>
-            <div className="flex items-center justify-center h-screen">
-                <RoomDetails></RoomDetails>
+            <div>
+                <SliderAsset></SliderAsset>
             </div>
-            <div className="flex items-center justify-center h-screen">
-                <RoomDetails></RoomDetails>
+            <div>
+                <SliderAssetTwo></SliderAssetTwo>
             </div>
-            <div className="flex items-center justify-center h-screen">
-                <RoomDetails></RoomDetails>
-            </div>
-            <div className="flex items-center justify-center h-screen">
-                <RoomDetails></RoomDetails>
+            <div className="bg-black w-full h-screen" >
+                <ExServiceSlider></ExServiceSlider>
             </div>
         </div>
     );
