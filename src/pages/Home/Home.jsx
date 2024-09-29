@@ -27,6 +27,7 @@ import HotelFacilities from "./HotelFacilites/HotelFacilities";
 import Review from "./Review/Review";
 import CardBox from "./CardBox/CardBox";
 import FooterCheckIn from "./FooterCheckIn/FooterCheckIn";
+import FooterBrand from "./FooterBrand/FooterBrand";
 
 const Home = () => {
   useEffect(() => {
@@ -119,7 +120,10 @@ const Home = () => {
         <FooterCheckIn></FooterCheckIn>
       </div>
       {/* Hotel Facilities Card Box*/}
-      <div className="mt-40">
+      <div className="">
+        <FooterBrand></FooterBrand>
+      </div>
+      <div className="">
         <CardBox></CardBox>
       </div>
     </div>

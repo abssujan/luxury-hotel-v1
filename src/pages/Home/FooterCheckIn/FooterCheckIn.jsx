@@ -53,15 +53,15 @@ const FooterCheckIn = () => {
   return (
     <div>
       <div
-        className="bg-fixed bg-cover bg-no-repeat h-[550px]"
+        className="bg-fixed bg-cover bg-no-repeat h-[600px]"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="h-full w-full bg-black bg-opacity-30">
           {/* container */}
           <div className="max-w-[1200px] mx-auto h-full relative">
-            <div className="max-w-[800px] mx-auto flex h-full items-center">
+            <div className="max-w-[800px] md:max-w-[1100px] mx-auto flex justify-between h-full items-center">
               {/* icons */}
-              <div>
+              <div className=" ">
                 <div className="text-[#e4a853] flex space-x-1 text-[15px] text-start   w-full">
                   <FaRegStar />
                   <FaRegStar />
@@ -97,7 +97,7 @@ const FooterCheckIn = () => {
                   </div>
 
                   {/* footer check in */}
-                  <div className="mt-2">
+                  <div className="mt-2 ">
                     <form className="flex flex-col  items-center justify-center">
                       {/* Check-in and check-out */}
                       <div className="flex flex-col w-full space-y-4">
