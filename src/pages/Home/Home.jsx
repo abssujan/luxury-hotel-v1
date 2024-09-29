@@ -25,6 +25,7 @@ import ExtraServices from "./ExtraServices/ExtraServices";
 import FixedHeroImage from "./FixedHeroImage/FixedHeroImage";
 import HotelFacilities from "./HotelFacilites/HotelFacilities";
 import Review from "./Review/Review";
+import CardBox from "./CardBox/CardBox";
 
 const Home = () => {
   useEffect(() => {
@@ -110,7 +111,7 @@ const Home = () => {
       </div>
       {/* Hotel Facilities */}
       <div className="mt-40">
-        <HotelFacilities></HotelFacilities>
+        <CardBox></CardBox>
       </div>
     </div>
   );
