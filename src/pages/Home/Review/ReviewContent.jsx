@@ -1,5 +1,4 @@
-import man from "../../../assets/review/man.jpg";
-import quot from "../../../assets/review/quot.png";
+import man from "../../../assets/review/man.jpg";;
 import { FaRegStar } from "react-icons/fa6";
 const ReviewContent = () => {
   return (
