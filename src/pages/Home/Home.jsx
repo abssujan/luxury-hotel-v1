@@ -28,6 +28,7 @@ import Review from "./Review/Review";
 import CardBox from "./CardBox/CardBox";
 import FooterCheckIn from "./FooterCheckIn/FooterCheckIn";
 import FooterBrand from "./FooterBrand/FooterBrand";
+import Footer from "./Footer/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -123,8 +124,9 @@ const Home = () => {
       <div className="">
         <FooterBrand></FooterBrand>
       </div>
+      {/* footer */}
       <div className="">
-        <CardBox></CardBox>
+        <Footer></Footer>
       </div>
     </div>
   );
